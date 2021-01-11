@@ -1924,7 +1924,23 @@
     <bcf:datasource type="file" datatype="bibtex">./AuxFiles/ProjectBib.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">Razavi2000</bcf:citekey>
+    <bcf:citekey order="1">8627998</bcf:citekey>
+    <bcf:citekey order="2">wang2017scene</bcf:citekey>
+    <bcf:citekey order="3">bhat2018cost</bcf:citekey>
+    <bcf:citekey order="4">yasenko2020image</bcf:citekey>
+    <bcf:citekey order="5">hamad2016detailed</bcf:citekey>
+    <bcf:citekey order="6">reddy2012efficient</bcf:citekey>
+    <bcf:citekey order="7">jiao2019survey</bcf:citekey>
+    <bcf:citekey order="8">8627998</bcf:citekey>
+    <bcf:citekey order="9">wang2017scene</bcf:citekey>
+    <bcf:citekey order="10">bhat2018cost</bcf:citekey>
+    <bcf:citekey order="11">8627998</bcf:citekey>
+    <bcf:citekey order="12">wang2017scene</bcf:citekey>
+    <bcf:citekey order="13">yasenko2020image</bcf:citekey>
+    <bcf:citekey order="14">yasenko2020image</bcf:citekey>
+    <bcf:citekey order="15">hamad2016detailed</bcf:citekey>
+    <bcf:citekey order="16">reddy2012efficient</bcf:citekey>
+    <bcf:citekey order="17">madhuri2019extractive</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
