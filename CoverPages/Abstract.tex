@@ -5,17 +5,19 @@
 \end{tikzpicture}
 
 
-Highlights of significant contributions: One page with 3 to 4 paragraphs\\
+% Highlights of significant contributions: One page with 3 to 4 paragraphs\\
 
-Paragraph 1: Importance of Topic, Present shortcomings in performance or computation etc, issues involved in the shortcomings, short on what is done in this report addressing shortcomings
+% Paragraph 1: Importance of Topic, Present shortcomings in performance or computation etc, issues involved in the shortcomings, short on what is done in this report addressing shortcomings
+
+Technology is an evolutionary process that has gained traction in business, academia and government in the recent years. Lectures in classrooms have advanced to the extent of using smart-boards and smart-classrooms. However, there exists an absence of any technological advancement regarding jotting down notes during a presentation or seminar. Our project aims to aid the attendees of any seminar, presentation or lecture in recording vital information in the form of concise notes. The main shortcoming was lack of GPU and limited RAM availability. Due to this, denoising autoencoder had to be trained on very few images. This might make the model vulnerable to overfitting, hence leading to model memorising the training images and producing very high training accuracy and very low validation accuracy. This was avoided by using L2 regularization which avoids overfitting of the model by penalising the weights that are very large.\\
+
+% Paragraph 2 Objectives of this work, short on algebraic methods used and formulations achieved, computational procedures developed. 
+
+The objectives of our project were to develop and train a denoising autoencoder to deblur the input image, to build an object detection model to detect text from the deblurred image and finally, to extract the detected text and summarize it using extractive summarization. By doing so, we will achieve the goal of our visual summarizer, that is to generate concise notes from any presentation or lecture.\\
 
 
-Paragraph 2 Objectives of this work, short on algebraic methods used and formulations achieved, computational procedures developed. \gls{ic}.
+% Paragraph 3: Description of simulation procedure including SW tools used and choice of test cases. Short on results achieved and significant highlights of improvements if any.
 
-
-Paragraph 3: Description of simulation procedure including SW tools used and choice of test cases. Short on results achieved and significant highlights of improvements if any.
-\gls{ic}
-
-Paragraph 4:The last para needed only if emulation (after simulation) or Hardware developed to validate simulation results in para 3. 
+The software tools used for our project include PyCharm, Google Colab and LabelImg. Software libraries used to train machine learning models are Tensorflow, Keras, \acrshort{ocv}, PyTesseract, NLTK (Natural Language Processing Toolkit), matplotlib, pandas and numpy to name a few. We have achieved a very efficient reconstruction of blurred images and, successfully implemented text extraction and summarization on them. Model accuracies can be further improved by increasing the size of the image dataset and training for more number of epochs.
 
 \pagebreak

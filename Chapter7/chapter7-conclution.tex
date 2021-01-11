@@ -1,0 +1,31 @@
+\chapter{Conclusion and Future Scope}
+
+\section{Conclusion}
+
+This project provides a smart solution of summarizing the entire presentation and logging it. There are two main objectives of this project. The first objective of this project is to build a more efficient object detection model compared to OCR (Optical Character Recognition) since OCR has many drawbacks associated with it such as reduced accuracy when input images are skewed or have low lighting. The second one is to extract text from blurred images and summarize the same. 
+
+The first objective was met by implementing a faster \acrshort{rcn} model for text detection. This model is proven to have better accuracy compared to OCR. The second objective was met by developing a denoising autoencoder which will deblur an image before passing it through the object detection model. This ensures better extraction efficiency. 
+
+An efficient faster \acrshort{rcn} model was developed for text detection which yielded a total loss of only 0.035. Denoising autoencoder was successfully developed and trained to obtain a training accuracy of 91\% and a validation accuracy of up to 87\%. This accuracy can be further improved by training the model on a larger dataset for more number of epochs.
+% First paragraph should bring in the scenario of the project and every objective should be explained here.
+
+% Second paragraph should say how the objectives are implemented and achieved.
+
+% Last paragraph should draw the conclusions from each objective with quantitative results, performance improvement etc. 
+
+\section{Future Scope}
+The future scope of the project should not limit its usage to classrooms or small presentations, but should be able to extend its capability, to cater to larger presentations and seminars. In order to achieve better quality text detection, an area that can be addressed would be recording the audio and integrating the audio and images to get a detailed summary. Noise may persist in the case of lower-grade equipment or even improper placement of the device on uneven terrain. Noise detection can improve the scope of use of this product. The microphone is extremely susceptible to external interference from the surroundings. To address this issue, better-grade equipment can be installed in the audio interface. Another solution is to ensure that the speaker, or the person making the delivery has a personalized microphone specifically for this purpose. \\
+
+Another extension that can be made is to generate personalized summaries specific to each user. A user who has paid more attention to the delivery or has prior knowledge of the topic, may not need as detailed a summary as to someone who has paid less attention or someone who is not well--versed in that particular field. The personalization can be used to cater to these specific needs.
+
+\section{Learning Outcomes of the Project}
+Over the course of the project, many concepts and tools were learnt, and the project was built successfully.
+\begin{itemize}
+\item Domains like Image Processing and machine learning, were explored in good depth in this project.
+\item We were able to understand the working of CNNs and extend its implementation to object detection model and denoising autoencoder.
+\item We were able to identify hardware limitations for training the models and overcome the problems that they might cause by implementing optimization methods like L2 regularization.
+\item We understood the concepts of Natural Language Processing, and applied them successfully to get the summary of the extracted text.
+\item We were able to identify its shortcomings for industrial applicability and address some of those issues in this report.
+
+\end{itemize}
+

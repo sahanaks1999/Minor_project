@@ -1,79 +1,71 @@
-\chapter{Introduction to Analog and Digital converters}
-Every chapter should start with an introduction paragraph. This paragraph should brief about the flow of the chapter. This introduction can be limited within 4 to 5 sentences. The chapter heading should be appropriately modified (a sample heading is shown for this chapter).
+\chapter{Introduction to Improvised Visual Summarizer using Denoising Algorithm}
+This chapter will introduce the need for a visual summarizer for presentations and lectures and discuss the broad objectives of the project. Further, a brief methodology along with the constraints of the project are discussed. 
 \section[Introduction]{\textbf{Introduction}}
-The title of the project can be introduced in this section. This section should neatly elaborate the context of the project, the relevance of the area chosen and the title. You can bring a brief history and arrive at the title of the project. Use appropriate number of paragraphs within this section. 
+As of today, technology is ubiquitous and has advanced at an unprecedented rate in several sectors of our lives with more than half the world’s population living hand-in-hand with technology. From smart watches to smart phones to smart cities, the embodiment of artificial intelligence in all our day-to-day activities no longer looks like a distant dream. Lectures in classrooms have also advanced to the extent of using smart-boards and smart-classrooms; the developments in jotting down notes in such scenarios has, however, not advanced at the same pace. 
 
-You are allowed to use figures or diagrams which can help in introducing the topic acknowledging the source. For example , if you are introducing a particular topic, an appropriate figure can be used. The figure should be referenced in the text as Figure. \ref{fig:universe} 
-\begin{figure}[htb]
-\centering
-	\includegraphics[scale=1]{Figures/universe}	
-	\caption{Sample picture of universe }
-	\label{fig:universe}
-\end{figure}
+Along with reading and listening, taking notes can tend to become  a passive activity where one doesn't quite register what the speaker is talking about but instead aimlessly writes down as much as they can keep up with. If one's approach to note taking involves trying to write down, word-for-word, just about everything that the teacher says, they will be more involved in getting words on paper than in focusing their attention and asking questions about the points that are important. An effective approach for successful classroom learning is to be an active listener as well as take well-organized and brief, yet explicit, notes; making them complete enough to provide you with an overview of the entire lecture.
 
-These guidelines are provided to formally expose you to the various ethical and technical issues involved in writing up your work and the format you are required to adhere to while submitting your project report.
-
-\section[Motivation]{\textbf{Motivation}}
-
-Brief the motivation of selecting your project title. You can elaborate the challenges in the specific area, relevance and importance of the chosen topic. 
+In the problem statement being tackled, the target audience includes the attendees of any seminar, presentation or lecture, be it students or the public in general, attending important conferences and talks. More often than not, providing complete undivided attention to the speaker proves to be difficult at these seminars as the attendee may be preoccupied with the objective of jotting down pointers and making notes for future reference. It is during this process that several essentials in the speaker’s delivery are missed out. Keeping this in mind, our project delves into the implementation of an efficient visual summarizer that provides a solution to this problem. 
+Be it visual images of PowerPoint slides or handwritten material that is presented in the seminars, our project will provide a smart solution of summarizing the entire presentation and generating an output of the same.
 
 \section[Problem statement]{\textbf{Problem statement}}
 
-Define the problem statement in this section, in one paragraph.
+The process of taking notes during a presentation or seminar tends to become a passive activity while one tries to listen and actively participate in discussions regarding the topic in question. Hence, there is a requirement to aid attendees of lectures and presentations in the process of recording vital information, in a concise format, dispensed during the addressal.
+
 
 \section[Objectives]{\textbf{Objectives}}
 The objectives of the project are
 \begin{enumerate}
-\item To design a pipelined ADC for audio frequency range
-\item List all the objectives in the above format , starting with "To"
-\item Limit the number of objectives to a maximum of three
+\item To develop and train a denoising autoencoder to deblur the input image.
+\item To build an object detection model to detect text from the deblurred image.
+\item To extract the detected text and summarize it using extractive summarization.
 \end{enumerate}
 
 \section[Literature Review]{\textbf{Literature Review}}
 
-A literature review is a text of a scholarly paper, which includes the current knowledge including substantive findings, as well as theoretical and methodological contributions to a particular topic. Literature reviews are secondary sources, and do not report new or original experimental work. Most often associated with academic-oriented literature, such reviews are found in academic journals, and are not to be confused with book reviews that may also appear in the same publication. Literature reviews are a basis for research in nearly every academic field . A narrow-scope literature review may be included as part of a peer-reviewed journal article presenting new research, serving to situate the current study within the body of the relevant literature and to provide context for the reader. In such a case, the review usually precedes the methodology and results sections of the work.
+Literature review, an integral part of every project, provides insight into how the proposed research is related prior research and demonstrates the originality and relevance of one's research problem as well as justifies the proposed methodology. 
 
-\subsection{Sample}
-The main types of literature reviews are: evaluative, exploratory, and instrumental. A fourth type, the systematic review, is often classified separately, but is essentially a literature review focused on a research question, trying to identify, appraise, select and synthesize all high-quality research evidence and arguments relevant to that question. A meta-analysis is typically a systematic review using statistical methods to effectively combine the data used on all selected studies to produce a more reliable result.
-\subsubsection[Review types]{\textbf{Review types}}
+\cite{8627998} discusses the powerful learning ability of deep learning based object detection and its potential to handle occlusion, clutter and low-resolution. Further, it also discusses Convolutional Neural Networks and its advantages over traditional methods -- hidden factors of input data can be extracted, exponentially augmented expressive capability, optimization of relative tasks. It also provides a brief review of salient object detection, face detection and pedestrian detection. Finally it demonstrates a few promising future directions and tasks such as multi-task joint optimization, scale adaptation, cascade networks and 3D object detection.
 
-The main types of literature reviews are: evaluative, exploratory, and instrumental. A fourth type, the systematic review, is often classified separately, but is essentially a literature review focused on a research question, trying to identify, appraise, select and synthesize all high-quality research evidence and arguments relevant to that question. A meta-analysis is typically a systematic review using statistical methods to effectively combine the data used on all selected studies to produce a more reliable result.
+The traditional optical character recognition technology (OCR) requires the text neat layout and neatness and background clean, and industrial production often fail to meet such standards. \cite{wang2017scene} proposes a new method based on convolution neural network (Faster RCNN) that aims to improve the correctness of text recognition. When compared with the conventional detection method, the correct rate of recognition based on Faster RCNN model can reach 90.4\%, and the correctness rate is 88.9\%. When compared with the traditional OCR, the method proposed in this paper is relatively stable, and the accuracy is relatively high.
 
+\cite{bhat2018cost} is our base paper. The objective of this paper was to enable the users to give their undivided attention to the lecture taking place, without them fretting over the key details, as the audio-visual summarizer will permit the users to always go back and refer to the lecture. The proposed solution included 4 vital steps - integration of Raspberry Pi with camera and microphone, implementing a text detection and extraction model, speech to text conversion using LAS model and summarizing the extracted text from images and audio using Natural Language Toolkit (NLTK).
 
-\subsubsection[Process and product]{\textbf{Process and product}}
+Autoencoder is very popular neural network for image processing. Denoising autoencoder is an important autoencoder because in some tasks we need a preprocessed image to get less noisy result. The research in \cite{yasenko2020image} describes ways to analyze noisy images and how to reduce that noise. The best result achieved after training is for 186 samples and this process has taken 2185.99 seconds and 95\% of 2048 frames have been denoised in 84.26 seconds. Furthermore, it was established that this method is 3.3 times faster than conventional methods.
 
-Distinguish between the process of reviewing the literature and a finished work or product known as a literature review. The process of reviewing the literature is often ongoing and informs many aspects of the empirical research project. All of the latest literature should inform a research project. Scholars need to be scanning the literature long after a formal literature review product appears to be completed.
+\cite{hamad2016detailed} provides a detailed analysis of Optical Character Recognition technology. The objective of OCR is to achieve modification or conversion of any form of text or text-containing documents such as handwritten text, printed or scanned text images, into an editable digital format for deeper and further processing. The challenges faced by OCR are scene complexity, conditions of uneven lighting, skewness (rotation), blurring and degradation, aspect ratios, fonts, multilingual environments. There are various phases of OCR such as preprocessing, segmentation, normalization, feature extraction, classification and post processing. Finally, this paper discusses the applications of OCR, namely handwriting recognition, receipt imaging, legal industry, banking, healthcare, automatic number plate recognition, etc.
 
-\subsubsection{\textbf{Page limitation}}
+The objective of \cite{reddy2012efficient} is a summarization system that produces a summary for a given web document based on sentence importance measures. It is an efficient approach for single document summarization which uses the two sentence importance measures. The first is the frequency of the terms in the sentence and its similarity to the other sentences. The second is sentences are ranked according to their respective scores and the sentences with top ranks are selected for summary. The summary is evaluated by using ‘recall’ evaluation measure.
 
-A careful literature review is usually 15 to 30 pages and could be longer. The process of reviewing the literature requires different kinds of activities and ways of thinking and link the activities of doing a literature review with Benjamin Bloom’s revised taxonomy of the cognitive domain (ways of thinking: remembering, understanding, applying, analysing, evaluating, and creating).
+\cite{jiao2019survey} primarily deals with the trends and vast range of research areas of deep-learning based object detection. Some of these trends are as combining one stage (fast but lower accuracy) and two stage detectors (higher accuracy but time consuming), video object detection include obstacles like motion blur, motion target ambiguity, smart targets, etc., versatility of multi-domain object detection. This paper also discusses unsupervised object detection models for intelligent detection mission and advanced medical biometrics to analyze retinal images and speech patterns.
+    
 
-This section should contain the review of the literature in the past.You should review a minimum of 10 papers from standard reference journals. Kindly avoid local conference papers and papers from predatory journals. Kindly consult with your guide and finalize papers to be considered for review before adding in this section.Report the major observations and findings from each paper in one paragraph in the format given below.
-
- proposed various techniques for adders and multipliers.Add the reference papers to the bibliography section using Jabref and cite it here using the instructions given in further chapters.
-
-
-\subsubsection{\textbf{Plagiarism}}
-
-To use someone else's exact words without quotation marks and appropriate credit, or to use the unique ideas of someone else without acknowledgement, is known as plagiarism. In publishing, plagiarism is illegal; in other circumstances, it is, at the least, unethical. You may quote or paraphrase the words or ideas of another if you document your source. Although you need not enclose the paraphrased material in quotation marks, you must document the source. 
-
-Paraphrased ideas are taken from someone else whether or not the words are identical. Paraphrasing a passage without citing the source is permissible only when the information paraphrased is common knowledge in a field. (Common knowledge refers to historical, scientific, geographical, technical, and other type of information on a topic readily available in handbooks, manuals, atlases and other references). 
-
-\subsubsection{How to add Reference}
-Use \texttt{Jabref} which will help in adding the reference in a separate file, from which one can use \verb|\citep\{\}| command to add reference. A sample, referring to a textbook would look something like this,\cite{Razavi2000}.
 
 \section[Brief Methodology of the project]{\textbf{Brief Methodology of the project}}
-Discuss about the methodology you identified to execute the objectives of your project in brief. Methodology is a system of practices, techniques, procedures, and rules used to execute a particular project. You can elaborate the methodology in a later chapter. Here you can present in the form of a flow diagram and explain the methodology in a paragraph.
+Our first step is to train a denoising autoencoder for deblurring the input images. We then move on to prepare an image dataset for training the object detection model, \acrlong{rcn} (Region Based Convolutional Neural Networks). Running the image through a Convoluted Neural Network (CNN) will generate a Feature Map. On running the Activation Map through a separate network, called the Region Proposal Network (RPN), interesting boxes/regions will be generated as outputs. The predicted region proposals are then reshaped using a Region of Interest Pooling (RoIP) layer following which it is passed through R--CNN. R--CNN has two functions:
+\begin{enumerate}
+\item Classify proposals into one of the classes
+\item Better adjust the bounding box for the proposal according to the predicted class i.e. group proposals of similar class to get final bounding box.
+\end{enumerate}
+Passing the blurred images through a denoising autoencoder before passing through the object detection model will help us achieve accurate detection of the text from the image which we will then extract using Tesseract \acrshort{ocv} module and summarize using Natural Language Toolkit. 
 
 \section[Assumptions made / Constraints of the project]{\textbf{Assumptions made / Constraints of the project}}
 
-List the assumptions made for the execution of the project in this section. You can also elaborate on the major constraints of the project. This section should clearly state under what conditions your project is valid. It is mandatory to have this section in your project report.
+The assumptions made for the execution of the project are as follows: 
+\begin{enumerate}
+    \item \textbf{Hardware Constraint: }Accuracy of the project is impacted due to the lack of GPU and limited RAM.
+    \item \textbf{Limited dataset: }The data set prepared is self-made and we were able to collect a limited number of images. With an increased number of images in the dataset will lead to better accuracy.
+    \item \textbf{Limitation with respect to blur: }The Denoising Autoencoder is trained for Gaussian blur. For normal blurring, such as that taken from a camera, the output of the autoencoder will not be inaccurate.
+\end{enumerate}
 
 \section[Organization of the report]{\textbf{Organization of the report}}
 
 This report is organized as follows. Write the discussions in each chapter. A sample is as follows.
 \begin{itemize}
-\item Chapter 2 discusses the fundamentals of ADC and the performance parameters for evaluation.
+\item Chapter 2 discusses the fundamentals of Convolutional Neural Networks.
+\item Chapter 3 introduces object detection and discusses the Faster R–CNN model used as well as the model summary.
+\item Chapter 4 introduces the Denoising Autoencoder and gives a description of our model summary and training details.
+\item Chapter 5 gives a description of text extraction and summarization methods.
+\item Chapter 6 discusses the results obtained after each stage and its analysis.
+\item Chapter 7 concludes the report.
 \end{itemize}
-
-In a similar way, write briefly about each chapter in one or two sentences.
